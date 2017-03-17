@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=yes, width=device-width">
+    <title>Simulated console for non-standard browsers</title>
+    <link rel="stylesheet" type="text/css" href="console.css">
+    <script type="text/javascript">
+        var hasBuiltInConsole = typeof window.console !== 'undefined';
+    </script>
+    <script src="console.js" data-forced="true"></script>
+    <script>
+        if (hasBuiltInConsole)
+            document.write('This browser has builtin console, but I forced it to use my own implementation.');
+        else
+            document.write("This browser does't have builtin console。");
+
+        console.log('这一行是在 head 中输出的。');
+    </script>
+</head>
+<body>
+<script>
+    console.log('我也能用 console.log() 了！');
+    console.info('这一行是用 info() 输出的。');
+    console.warn('这一行是用 warn() 输出的。');
+    console.error('这一行是用 error() 输出的。');
+    console.log('输出超长的一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一' +
+        '一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一行');
+</script>
+</body>
+</html>
