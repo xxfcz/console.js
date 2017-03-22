@@ -20,11 +20,11 @@ using [JSON-js](https://github.com/douglascrockford/JSON-js), or better,
 Usage
 =====
 
-To reference the simulated console using a name other than traditional `console`, you can provide an alias:
+To reference the simulated console using a name other than the traditional `console`, you can provide an alias:
 
     <script src="lib/console.js"  data-alias="myConsole"></script>
 
 To force the browser to use the simulated console, even if they have builtin implementation, you can do this:
 
-    <script src="/conlibsole.js"  data-forced="true"></script>
+    <script src="lib/console.js"  data-forced="true"></script>
 
